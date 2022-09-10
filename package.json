@@ -1,0 +1,17 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/components/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "MohamadHosseinMoghaddamfar mhmoghaddamfar@gmail.com",
+  "license": "ISC",
+  "repository": "github:https://github.com/PVZMF/Hw_sass_project.git",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0"
+  }
+}
