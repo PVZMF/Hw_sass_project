@@ -12,9 +12,7 @@
   "repository": "github:https://github.com/PVZMF/Hw_sass_project.git",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.7.0",
+    "html-extend": "^1.5.0",
     "parcel": "^2.7.0"
-  },
-  "dependencies": {
-    "html-extend": "^1.5.0"
   }
 }
