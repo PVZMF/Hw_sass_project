@@ -1,8 +1,8 @@
-@use "globalClass";
+@use "extends";
 @use "variables";
 
 .card {
-  display: flex;
+  @extend %flex_disp;
   flex-direction: row-reverse;
   position: relative;
   align-items: center;
@@ -29,7 +29,7 @@
   }
 
   .card__haveComment{ 
-    display: flex;
+    @extend %flex_disp;
     align-self: flex-end;
     margin: 20px 10px;
     img{
@@ -38,11 +38,8 @@
     }
   }
   .card-body {
-    // padding: 16px;
-    display: flex;
-    // justify-content: space-between;
+    @extend %flex_disp;
     flex-direction: column;
-    // line-height: 20px;
   }
   .card-body h4{
     margin:5px;
