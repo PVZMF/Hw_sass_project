@@ -7,25 +7,19 @@
     padding: 0;
 }
 .header{
-    @extend %flex_disp;
-    justify-content: center;
-    border-bottom: 1px solid variables.$plaeholder-color;
+    @include mixins.flex();
+    border-bottom: 1px solid variables.$hover-button;
     .header__container{
-        @extend %flex_disp;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
+        @include mixins.flex();
         margin: 5px 30px;
         overflow: hidden;
         width: 100%;
         max-width: 1800px;
+
         .header__right{
-            @extend %flex_disp;
-            align-items: center;
-            flex-shrink: 1;
-            flex-grow: 1;
+            @include mixins.flex($justify:initial,$grow:1);
             .header__logo a {
-                @extend %flex_disp;
+                @include mixins.flex();
                 @include mixins.outter;
             }
 
@@ -36,10 +30,18 @@
                 background-color: rgb(201, 197, 197);
             }
 
-            .header__categories,.header__loc{
+            .header__categories{
                 @extend %button-hover;
+                a{
+                    margin-left: 10px;
+                }
             }
-
+            .header__loc{
+                @extend %button-hover;
+                a{
+                    margin-right: 10px;
+                }
+            }
             .header__searhbar:focus-within{
                 background-color: white;
             }
@@ -49,17 +51,27 @@
             }
         }
         .header__left{
-            @extend %flex_disp;
-            align-items: center;
+            @include mixins.flex();
             .header__btnApply{
-                @extend %button-form;
-                background-color: variables.$button1-color;
-                color:white;
-                font-size: medium;
-                white-space: nowrap;
+                @extend %button-hover;
+                :hover{
+                    color:white !important;
+                    background-color: variables.$hover-button1 !important;
+                }
+                a{
+                    background-color: variables.$button1-color;
+                    color:white !important;
+                }
             }
+
             .header__chat,.header__divarman,.header__support{
                 @extend %button-hover;
+            }
+            .header__support{
+                @extend %button-hover;
+                a{
+                    margin-left: 10px;
+                }
             }
         }
     }

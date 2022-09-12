@@ -4,7 +4,12 @@
     padding: 10px;
   }
 
-@mixin flex-d {
+@mixin flex($dir:row,$justify:space-between,$align:center,$wrap:nowrap,$grow:0,$shrink:1) {
     display: flex;
-    position: relative;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+    flex-shrink: $shrink;
+    flex-grow: $grow;
 }

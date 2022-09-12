@@ -1,11 +1,10 @@
 @use "extends";
 @use "variables";
+@use "mixins";
 
 .card {
-  @extend %flex_disp;
-  flex-direction: row-reverse;
+  @include mixins.flex($dir:row-reverse);
   position: relative;
-  align-items: center;
   height: 168px;
   padding: 16px;
   max-width: 400px;
@@ -29,7 +28,6 @@
   }
 
   .card__haveComment{ 
-    @extend %flex_disp;
     align-self: flex-end;
     margin: 20px 10px;
     img{
@@ -38,8 +36,7 @@
     }
   }
   .card-body {
-    @extend %flex_disp;
-    flex-direction: column;
+    @include mixins.flex($dir: column, $align:initial);
   }
   .card-body h4{
     margin:5px;
