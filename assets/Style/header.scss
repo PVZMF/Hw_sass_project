@@ -2,34 +2,61 @@
 @use "mixins";
 @use "variables";
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .header{
     @extend %flex_disp;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
+    margin: 5px 30px;
+    overflow: hidden;
+    border-bottom: 1px solid variables.$plaeholder-color;
 
-    .header__logo a {
+    .header__right{
         @extend %flex_disp;
-        @include mixins.outter;
-    }
+        align-items: center;
+        flex-shrink: 1;
+        flex-grow: 1;
+        .header__logo a {
+            @extend %flex_disp;
+            @include mixins.outter;
+        }
 
-    #dash{
-        content: "";
-        width: 1px;
-        height: 30px;
-        background-color: rgb(201, 197, 197);
-    }
+        #dash{
+            content: "";
+            width: 1px;
+            height: 30px;
+            background-color: rgb(201, 197, 197);
+        }
 
-    .header__loc{
-        @extend %button-hover;
-    }
+        .header__categories,.header__loc{
+            @extend %button-hover;
+        }
 
-    .header__categories{
-        @extend %button-hover;
+        .header__searhbar:focus-within{
+            background-color: white;
+        }
+        .header__searhbar{
+            @extend %searhbar;
+            padding-left: 100px;
+        }
     }
-    .header__searhbar:focus-within{
-        background-color: white;
+    .header__left{
+        @extend %flex_disp;
+        align-items: center;
+        .header__btnApply{
+            @extend %button-form;
+            background-color: variables.$button1-color;
+            color:white;
+            font-size: medium;
+            white-space: nowrap;
+        }
+        .header__chat,.header__divarman,.header__support{
+            @extend %button-hover;
+        }
     }
-    .header__searhbar{
-        @extend %searhbar;
-    }
-
 }
