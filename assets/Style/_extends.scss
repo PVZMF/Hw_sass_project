@@ -1,0 +1,63 @@
+@use "variables";
+
+%flex_disp {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+%button-form {
+  border-radius: 5px;
+  padding: 0 10px;
+  margin: 0 5px;
+}
+.caption_style{
+    color: gray;
+}
+
+%icon{
+    margin: 0 10px;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+%button-hover {
+  :hover{
+    background-color: variables.$hover-button;
+  }
+  a{
+    @extend %flex_disp;
+    @extend %button-form;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+
+    span{
+        font-weight: 500;
+    }
+    img{
+        @extend %icon;
+        }
+  }
+}
+
+%searhbar{
+  @extend %flex_disp;
+  @extend %button-form;
+  background-color: variables.$hover-button;
+  flex-grow: 1;
+  align-items: center;
+  border: 1px solid black;
+  
+  height: 40px;
+  input{
+      border:none;
+      outline: none;
+      flex-grow: 1; 
+      background: none;    
+  }
+  img{
+      @extend %icon;
+  }
+}
