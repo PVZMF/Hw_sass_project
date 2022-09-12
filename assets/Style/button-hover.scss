@@ -1,0 +1,23 @@
+.header__loc:hover{
+    background-color: variables.$hover-button;
+}
+.header__loc{
+    @extend %button-form;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+
+    span{
+        font-weight: 500;
+    }
+    img{
+        margin-left: 5px;
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        }
+    
+}
