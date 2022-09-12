@@ -8,14 +8,15 @@
 }
 .header{
     @include mixins.flex();
-    border-bottom: 1px solid variables.$hover-button;
+    justify-content: center;
+    box-shadow: 2px 2px 2px 1px variables.$hover-button;
+    position: sticky;
     .header__container{
         @include mixins.flex();
         margin: 5px 30px;
         overflow: hidden;
         width: 100%;
         max-width: 1800px;
-
         .header__right{
             @include mixins.flex($justify:initial,$grow:1);
             .header__logo a {

@@ -18,6 +18,18 @@
     width: 20px;
     height: 20px;
 }
+
+%textPlusIcon{
+    @extend %button-form;
+    transition: 0.1s;
+    color: gray;
+    font-size: small;
+    white-space: nowrap;
+    font-weight: 600;
+    img{
+        @extend %icon;
+        }
+}
 %button-hover {
   margin: 0 5px;
   :hover{
@@ -29,20 +41,12 @@
   }
   a{
     @include mixins.flex($dir: row-reverse);
-    @extend %button-form;
-    transition: 0.1s;
-    color: gray;
-    font-size: small;
-    white-space: nowrap;
-    font-weight: 600;
-    img{
-        @extend %icon;
-        }
+    @extend %textPlusIcon;
   }
 }
 
 %searhbar{
-  @include mixins.flex();
+  @include mixins.flex($justify:center);
   @extend %button-form;
   cursor: auto;
   background-color: variables.$hover-button;

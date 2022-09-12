@@ -1,0 +1,21 @@
+@use "mixins";
+@use "variables";
+.sep{
+    content: "";
+    width: 252px;
+    height: 2px;
+    background: black;
+}
+.aside{
+    width: 30%;
+    position: fixed;
+    ul{
+        .item{
+            @include mixins.flex($justify:start);
+            @extend %textPlusIcon;
+            img{
+                padding:10px;
+            }
+        }
+    }
+}
