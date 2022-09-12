@@ -25,6 +25,7 @@
 %button-hover {
   :hover{
     background-color: variables.$hover-button;
+    color: variables.$text-dark;
   }
   a{
     @extend %flex_disp;
@@ -35,9 +36,7 @@
     color: gray;
     font-size: small;
     white-space: nowrap;
-    span{
-        font-weight: 600;
-    }
+    font-weight: 600;
     img{
         @extend %icon;
         }
