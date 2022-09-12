@@ -1,0 +1,10 @@
+@use "variables";
+@mixin outter {
+    margin: 0;
+    padding: 10px;
+  }
+
+@mixin flex-d {
+    display: flex;
+    position: relative;
+}
