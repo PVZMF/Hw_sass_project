@@ -1,0 +1,35 @@
+@use "extends";
+@use "mixins";
+@use "variables";
+
+.header{
+    @extend %flex_disp;
+    align-items: center;
+
+    .header__logo a {
+        @extend %flex_disp;
+        @include mixins.outter;
+    }
+
+    #dash{
+        content: "";
+        width: 1px;
+        height: 30px;
+        background-color: rgb(201, 197, 197);
+    }
+
+    .header__loc{
+        @extend %button-hover;
+    }
+
+    .header__categories{
+        @extend %button-hover;
+    }
+    .header__searhbar:focus-within{
+        background-color: white;
+    }
+    .header__searhbar{
+        @extend %searhbar;
+    }
+
+}
