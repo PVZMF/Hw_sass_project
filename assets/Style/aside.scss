@@ -4,18 +4,13 @@
     content: "";
     width: 252px;
     height: 2px;
-    background: black;
+    background: variables.$hover-button;
     cursor: auto;
 }
-.main{
-    @include mixins.flex($justify:center);
-    .main__container{
-        @extend %container;
-    }
-}
 .aside{
-    width: 15%;
-    position: fixed;
+    width: 30%;
+    max-width: 270px;
+    max-height: 800px;
     overflow: auto;
     ul{
         margin-top: 50px;

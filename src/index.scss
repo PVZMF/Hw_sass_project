@@ -1,3 +1,18 @@
+@use "../assets/Style/mixins";
+
 @import "../assets/Style/header.scss";
 @import "../assets/Style/aside.scss";
+@import "../assets/Style/listCard.scss";
 @import "../assets/Style/card.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    @include mixins.flex($justify:center);
+    .main__container{
+        @extend %container;
+        @include mixins.flex($justify:initial,$align:start);
+    }
+}

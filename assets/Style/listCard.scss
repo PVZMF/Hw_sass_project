@@ -1,0 +1,25 @@
+@use "variables";
+@use "mixins";
+
+.wall{
+    @include mixins.flex($dir:column,$justify:center);
+    width: 100%;
+    margin: 35px 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    h4{
+        align-self: flex-end;
+        color: variables.$text-secondary;
+        font-size: 10px;
+    }
+    .sep{
+        width: 100%;
+        margin: 10px;
+    }
+    .listcards{
+        @include mixins.flex($wrap:wrap);
+        justify-content: start;
+        max-height: 700px;
+    }
+
+}

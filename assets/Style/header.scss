@@ -2,19 +2,13 @@
 @use "mixins";
 @use "variables";
 
-*{
-    margin: 0;
-    padding: 0;
-}
 .header{
     @include mixins.flex($justify:center);
     box-shadow: 2px 2px 2px 1px variables.$hover-button;
-    position: sticky;
     .header__container{
         @extend %container;
         @include mixins.flex();
         margin: 0 30px;
-        overflow: hidden;
         .header__right{
             @include mixins.flex($justify:initial,$grow:1);
             .header__logo a {
