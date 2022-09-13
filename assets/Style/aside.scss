@@ -5,16 +5,48 @@
     width: 252px;
     height: 2px;
     background: black;
+    cursor: auto;
+}
+.main{
+    @include mixins.flex($justify:center);
+    .main__container{
+        @extend %container;
+    }
 }
 .aside{
-    width: 30%;
+    width: 15%;
     position: fixed;
+    overflow: auto;
     ul{
+        margin-top: 50px;
         .item{
+            cursor: auto !important;
             @include mixins.flex($justify:start);
             @extend %textPlusIcon;
+            p{
+                color: rgb(53, 52, 52) !important;
+            }
+            span{
+                cursor: pointer;
+            }
             img{
                 padding:10px;
+                cursor: pointer;
+            }
+        }
+        .contact{
+            flex-wrap: wrap !important;
+            span{
+                width: 20% !important;
+                margin-left: 30px !important;
+                font-size: smaller !important;
+            }
+            img{
+                width: 10% !important;
+                margin: 20px 0 !important;
+            }
+            img:nth-child(1){
+                margin-right: 20px !important;
             }
         }
     }

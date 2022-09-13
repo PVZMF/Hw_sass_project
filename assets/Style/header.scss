@@ -7,16 +7,14 @@
     padding: 0;
 }
 .header{
-    @include mixins.flex();
-    justify-content: center;
+    @include mixins.flex($justify:center);
     box-shadow: 2px 2px 2px 1px variables.$hover-button;
     position: sticky;
     .header__container{
+        @extend %container;
         @include mixins.flex();
-        margin: 5px 30px;
+        margin: 0 30px;
         overflow: hidden;
-        width: 100%;
-        max-width: 1800px;
         .header__right{
             @include mixins.flex($justify:initial,$grow:1);
             .header__logo a {
